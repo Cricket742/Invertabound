@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d42bp7lajesp"]
+
+[ext_resource type="Texture2D" uid="uid://dvfvy5ip4p5rb" path="res://Art/invertPlayer.png" id="1_2y3q5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3ytt"]
+size = Vector2(10, 29)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2y3q5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_h3ytt")
