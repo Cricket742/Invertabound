@@ -29,6 +29,11 @@ public partial class player : CharacterBody2D
         if (velocity.Length() > 0){
             velocity = velocity.Normalized() * Speed;
         }
+    Position += velocity * (float)delta;
+    Position = new Vector2(
+    x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
+    y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
+    );    
     }
     
 }
