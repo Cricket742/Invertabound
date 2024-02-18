@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://dhmnsl28ud848"]
+[gd_scene load_steps=4 format=3 uid="uid://dhmnsl28ud848"]
+
+[ext_resource type="Texture2D" uid="uid://dou4k6dkwmoer" path="res://Art/Character Art/invertPlayer.png" id="1_eryp6"]
+[ext_resource type="Script" path="res://Characters/player.gd" id="1_mqjgj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmdlf"]
+size = Vector2(16, 32)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_mqjgj")
 
 [node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_eryp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hmdlf")
